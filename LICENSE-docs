@@ -2,7 +2,8 @@ Copyright (c) 2026 Jonas Niesner
 
 The documentation in this repository (README.md, NOTICE, docs/, recipes/*.md, recipes/*.json, luts/*.md,
 and the decoded luts/**/*.txt files) is licensed under the Creative Commons Attribution 4.0 International
-License (CC BY 4.0).
+License (CC BY 4.0). The same licence covers the images in docs/img/ and the demo videos attached to the
+GitHub releases of this repository.
 
 SPDX-License-Identifier: CC-BY-4.0
 Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode
