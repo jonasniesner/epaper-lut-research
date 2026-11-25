@@ -1,0 +1,21 @@
+{
+ "name": "flash73_L1b",
+ "lab_names": [
+  "L1b",
+  "L1b6",
+  "L1b7"
+ ],
+ "panel": "7.3in S6",
+ "input": "live stock set",
+ "command": "python -m epdlut.recipe flash73 SET.bin OUT.bin --shake 2 --keep-w-gap",
+ "steps": [
+  "as S3 but 2 balanced S/K shake pairs in front of each changed-pixel track, W gap kept (F1e-style W slot)"
+ ],
+ "expected": {
+  "refresh": "17.6 s",
+  "quality": "W from dark 0.57; 20 updates median 0.49-0.57; held ink 0.21 dE00/update"
+ },
+ "refs": "R-0225, R-0231, R-0233",
+ "flags": "[1 ex] [cam] [prov]",
+ "licence": "CC-BY-4.0 (text); you build the table from your own read-back, which we do not distribute"
+}

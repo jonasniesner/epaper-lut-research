@@ -1,0 +1,23 @@
+{
+ "name": "replica_s6",
+ "lab_names": [
+  "C0 (7.3in byte-true replica)",
+  "set-5 replica (7.09in)"
+ ],
+ "panel": "7.3in / 7.09in S6",
+ "input": "your live stock set (800 B)",
+ "command": "python -m epdlut.recipe replica SET.bin OUT.bin --pwr-prefix \"3F 00\"   (7.09in: --pwr-prefix \"0F 00\" --panel 7.09)",
+ "steps": [
+  "take the live set unchanged",
+  "write PWR data bytes 2-5 = the set's header bytes 1-4",
+  "VDCS 0x0F on the 7.3in",
+  "set the PSR select bit"
+ ],
+ "expected": {
+  "refresh": "= stock (7.3in warm set 949 frames, 22.3 s at PLL 02)",
+  "quality": "7.3in set 6: K 0.08 ... G 0.13 dE00 vs stock; 7.09in set 5 at PLL 04: within 0.4"
+ },
+ "refs": "R-0186, R-0229, R-0240",
+ "flags": "[1 ex] [cam]",
+ "licence": "CC-BY-4.0 (text); you build the table from your own read-back, which we do not distribute"
+}

@@ -1,0 +1,21 @@
+{
+ "name": "fast709_F3c",
+ "lab_names": [
+  "F3c",
+  "F3c_s"
+ ],
+ "panel": "7.09in S6 dual-chip",
+ "input": "live stock set (cool band, set 4)",
+ "command": "python -m epdlut.recipe fast709 SET4.bin OUT.bin --variant F3c",
+ "steps": [
+  "remove the shake rows",
+  "LUTC schedule at PLL 08: opening rows at rate code 7, colour rows at rate code 2"
+ ],
+ "expected": {
+  "refresh": "21.67 s (stock 30.2 s)",
+  "quality": "worst 0.69 dE00"
+ },
+ "refs": "R-0201",
+ "flags": "[1 ex] [cam]",
+ "licence": "CC-BY-4.0 (text); you build the table from your own read-back, which we do not distribute"
+}

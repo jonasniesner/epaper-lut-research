@@ -1,0 +1,21 @@
+{
+ "name": "fast709_G13",
+ "lab_names": [
+  "G13"
+ ],
+ "panel": "7.09in S6 dual-chip",
+ "input": "live stock set (set 4)",
+ "command": "python -m epdlut.recipe fast709 SET4.bin OUT.bin --variant G13",
+ "steps": [
+  "remove row 3",
+  "first 50 % of the colour rows at rate code 3 (code 3 late in the colour rows breaks green)",
+  "PLL 08"
+ ],
+ "expected": {
+  "refresh": "17.5 s",
+  "quality": "worst 2.04 dE00; with a stock refresh every 10, median < 1"
+ },
+ "refs": "R-0204, R-0221",
+ "flags": "[1 ex] [cam]",
+ "licence": "CC-BY-4.0 (text); you build the table from your own read-back, which we do not distribute"
+}

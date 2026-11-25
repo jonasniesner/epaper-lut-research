@@ -1,0 +1,20 @@
+# s709_dose_ladder  S6 800 B  sha1 1cda252074dbbb805a636358fba9dcdbf261901f
+header ff 7c b7 f6 f4 be fd ff
+block frames {'LUTC': 0, 0: 20, 1: 20, 2: 20, 3: 20, 4: 0, 5: 0, 6: 0, 7: 0}  refresh = 20 frames
+LUTC (vcom, rate, frames): empty
+slot 0: 0x14 Sx3 Kx3   (20 fr)
+    row 0: M=1 [RA=1 x (014 S3 K3)] [RB=0 x ()]
+slot 1: 0x16 Sx2 Kx2   (20 fr)
+    row 0: M=1 [RA=1 x (016 S2 K2)] [RB=0 x ()]
+slot 2: 0x8 Sx6 Kx6   (20 fr)
+    row 0: M=1 [RA=1 x (08 S6 K6)] [RB=0 x ()]
+slot 3: Sx10 Kx10   (20 fr)
+    row 0: M=1 [RA=1 x (S10 K10)] [RB=0 x ()]
+
+lint: PASS
+  L1 refresh 20 frames = 0.272 s at PLL 04
+  L4 slot 0: ends on a drive level at the refresh end (end hold until POF)
+  L4 slot 1: ends on a drive level at the refresh end (end hold until POF)
+  L4 slot 2: ends on a drive level at the refresh end (end hold until POF)
+  L4 slot 3: ends on a drive level at the refresh end (end hold until POF)
+  L3 q_sf {0: -0.0, 1: -0.0, 2: -0.0, 3: -0.0}

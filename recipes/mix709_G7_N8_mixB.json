@@ -1,0 +1,24 @@
+{
+ "name": "mix709_G7_N8_mixB",
+ "lab_names": [
+  "G7_N8_mixB"
+ ],
+ "panel": "7.09in S6 dual-chip",
+ "input": "two live stock sets: the cool set (4) and the warm set (5)",
+ "command": "python -m epdlut.recipe mix709 SET4.bin SET5.bin OUT.bin",
+ "steps": [
+  "W rows from set 4, K/Y/B rows from set 5",
+  "stretch the B phases x1.493 to the stock PLL-08 pulse widths",
+  "8 balanced S/K toggles before each changed-pixel track",
+  "pad, right-align, balance at both nominal and measured rails",
+  "PLL 04, set-5 rails; codes 4/7 hold"
+ ],
+ "expected": {
+  "refresh": "11.5 s (stock 30-35 s)",
+  "quality": "set 5 median 0.60 / worst 1.64; set 4 median 0.74 / worst 1.67; 100 updates (stock every 10) largest rise +0.06"
+ },
+ "refs": "R-0240, R-0242",
+ "flags": "[1 ex] [cam]",
+ "note": "our builder output differs from the lab table in the prefix (830 vs 857 frames); verify before relying on it",
+ "licence": "CC-BY-4.0 (text); you build the table from your own read-back, which we do not distribute"
+}

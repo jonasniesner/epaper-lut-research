@@ -1,0 +1,414 @@
+{
+ "schema": "epaper-lut-research manifest v1",
+ "licence": "CC-BY-SA-4.0 (see luts/LICENSE)",
+ "tables": [
+  {
+   "name": "s73_homemark_H16M10",
+   "file": "s6/s73_homemark_H16M10.bin",
+   "family": "S6-800",
+   "sha1": "1f603d7a4d8e28926e6901d6da7a5f78bc4b1084",
+   "tested_panel": "7.3in S6 example (unit A)",
+   "purpose": "sub-second two-colour partial: HOME (pale yellow, slot 1 = border) K16 0x6 S16; MARK (navy, slot 5) S10 K10; every other code empty = hold",
+   "frames": 38,
+   "predicted_s": 0.93,
+   "pll": "02",
+   "write_with": {
+    "PWR": "3F 00 1E 18 23 3E",
+    "codes": [
+     1,
+     5
+    ],
+    "VDCS": "0x0F",
+    "LUT_select": "PSR byte 2 bit 7"
+   },
+   "measured_result": "BUSY 0.935 s; 100 updates with no stock refresh, home/mark cells drift no more than an untouched control strip (slopes 0.002/0.008 dE00 per update); home/mark contrast 55-65 dE00",
+   "refs": "R-0021, R-0199",
+   "flags": "[1 ex] [cam]",
+   "lint": "PASS",
+   "origin": "from-scratch (our synthetic segments; no stock rows)",
+   "licence": "CC-BY-SA-4.0",
+   "header_note": "header bytes 1-6 carry the rail/VCOM/rate codes of the stock set our lab used as a template; custom mode ignores the header (rails come from PWR, VCOM from VDCS, frame rate from PLL), so you may overwrite them with your own set's header bytes"
+  },
+  {
+   "name": "s73_homemark_H12M6",
+   "file": "s6/s73_homemark_H12M6.bin",
+   "family": "S6-800",
+   "sha1": "9a2080b1747f30f5ff357e893414002536336c65",
+   "tested_panel": "7.3in S6 example (unit A)",
+   "purpose": "shortened home/mark: HOME K12 0x6 S12, MARK S6 K6",
+   "frames": 30,
+   "predicted_s": 0.743,
+   "pll": "02",
+   "write_with": {
+    "PWR": "3F 00 1E 18 23 3E",
+    "codes": [
+     1,
+     5
+    ],
+    "VDCS": "0x0F",
+    "LUT_select": "PSR byte 2 bit 7"
+   },
+   "measured_result": "BUSY 0.75 s; 50 updates; drifts 2-3x faster than H16M10 (2.1/3.9 vs 1.4/2.6 dE00): use H16M10",
+   "refs": "R-0199",
+   "flags": "[1 ex] [cam]",
+   "lint": "PASS",
+   "origin": "from-scratch (our synthetic segments; no stock rows)",
+   "licence": "CC-BY-SA-4.0",
+   "header_note": "header bytes 1-6 carry the rail/VCOM/rate codes of the stock set our lab used as a template; custom mode ignores the header (rails come from PWR, VCOM from VDCS, frame rate from PLL), so you may overwrite them with your own set's header bytes"
+  },
+  {
+   "name": "s73_tick_ladder",
+   "file": "s6/s73_tick_ladder.bin",
+   "family": "S6-800",
+   "sha1": "51707788efeff345807ebc804bc596284311fa48",
+   "tested_panel": "7.3in S6 example (unit A)",
+   "purpose": "S/K tick ladder: code 0 S2K2, code 2 S4K4, code 3 S6K6 (each + 1 level-0 frame), code 5 MARK S10K10, code 1 HOME (border), code 4 hold",
+   "frames": 38,
+   "predicted_s": 0.93,
+   "pll": "02",
+   "write_with": {
+    "PWR": "3F 00 1E 18 23 3E",
+    "codes": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "VDCS": "0x0F",
+    "LUT_select": "PSR byte 2 bit 7"
+   },
+   "measured_result": "BUSY 0.93 s on the lean path; S/K ticks only reach light grey (L* 77-91); repeated pairs give a monotonic ladder of about 4 grey levels, then saturate",
+   "refs": "R-0208",
+   "flags": "[1 ex] [cam] [prov]",
+   "lint": "PASS",
+   "origin": "from-scratch (our synthetic segments; no stock rows)",
+   "licence": "CC-BY-SA-4.0",
+   "header_note": "header bytes 1-6 carry the rail/VCOM/rate codes of the stock set our lab used as a template; custom mode ignores the header (rails come from PWR, VCOM from VDCS, frame rate from PLL), so you may overwrite them with your own set's header bytes"
+  },
+  {
+   "name": "s709_homemark_P1a",
+   "file": "s6/s709_homemark_P1a.bin",
+   "family": "S6-800",
+   "sha1": "4ac7fc386d65a50190f30ab1375a74d5fa808617",
+   "tested_panel": "7.09in dual-chip S6 example",
+   "purpose": "7.09in home/mark: MARK S10 K10 (code 0), HOME K16 0x6 S16 (code 1 = border)",
+   "frames": 38,
+   "predicted_s": 0.517,
+   "pll": "04",
+   "write_with": {
+    "PWR": "0F 00 1A 24 30 38",
+    "codes": [
+     0,
+     1
+    ],
+    "VDCS": "chip default",
+    "LUT_select": "PSR byte 2 bit 7"
+   },
+   "measured_result": "BUSY 0.51 s; drift 0.018 dE00/update; contrast only 22-25 dE00 (mark is light blue, home cream on this panel)",
+   "refs": "R-0201",
+   "flags": "[1 ex] [cam]",
+   "lint": "PASS",
+   "origin": "from-scratch (our synthetic segments; no stock rows)",
+   "licence": "CC-BY-SA-4.0",
+   "header_note": "header bytes 1-6 carry the rail/VCOM/rate codes of the stock set our lab used as a template; custom mode ignores the header (rails come from PWR, VCOM from VDCS, frame rate from PLL), so you may overwrite them with your own set's header bytes"
+  },
+  {
+   "name": "s709_homemark_P1b",
+   "file": "s6/s709_homemark_P1b.bin",
+   "family": "S6-800",
+   "sha1": "125138d8428f20f367e807dbf5990c462f499a30",
+   "tested_panel": "7.09in dual-chip S6 example",
+   "purpose": "7.09in home/mark x1.5: MARK S15 K15, HOME K24 0x6 S24",
+   "frames": 54,
+   "predicted_s": 0.734,
+   "pll": "04",
+   "write_with": {
+    "PWR": "0F 00 1A 24 30 38",
+    "codes": [
+     0,
+     1
+    ],
+    "VDCS": "chip default",
+    "LUT_select": "PSR byte 2 bit 7"
+   },
+   "measured_result": "BUSY 0.73 s; 100 updates, drift 0.006 dE00/update; contrast 21-27 dE00",
+   "refs": "R-0201",
+   "flags": "[1 ex] [cam]",
+   "lint": "PASS",
+   "origin": "from-scratch (our synthetic segments; no stock rows)",
+   "licence": "CC-BY-SA-4.0",
+   "header_note": "header bytes 1-6 carry the rail/VCOM/rate codes of the stock set our lab used as a template; custom mode ignores the header (rails come from PWR, VCOM from VDCS, frame rate from PLL), so you may overwrite them with your own set's header bytes"
+  },
+  {
+   "name": "s709_mark_ticks",
+   "file": "s6/s709_mark_ticks.bin",
+   "family": "S6-800",
+   "sha1": "7b2012666631416ad7bd2658aede11bea3867c32",
+   "tested_panel": "7.09in dual-chip S6 example",
+   "purpose": "7.09in one-way mark ticks: code 0 S10 K10, code 1 (border) S2 K2",
+   "frames": 20,
+   "predicted_s": 0.272,
+   "pll": "04",
+   "write_with": {
+    "PWR": "0F 00 1A 24 30 38",
+    "codes": [
+     0,
+     1
+    ],
+    "VDCS": "chip default",
+    "LUT_select": "PSR byte 2 bit 7"
+   },
+   "measured_result": "ticks land light blue, 16-20 dE00 away from black; earlier ticks stable (+0.05/-0.02 L* per update)",
+   "refs": "R-0210",
+   "flags": "[1 ex] [cam]",
+   "lint": "PASS",
+   "origin": "from-scratch (our synthetic segments; no stock rows)",
+   "licence": "CC-BY-SA-4.0",
+   "header_note": "header bytes 1-6 carry the rail/VCOM/rate codes of the stock set our lab used as a template; custom mode ignores the header (rails come from PWR, VCOM from VDCS, frame rate from PLL), so you may overwrite them with your own set's header bytes"
+  },
+  {
+   "name": "s709_dose_ladder",
+   "file": "s6/s709_dose_ladder.bin",
+   "family": "S6-800",
+   "sha1": "1cda252074dbbb805a636358fba9dcdbf261901f",
+   "tested_panel": "7.09in dual-chip S6 example",
+   "purpose": "7.09in grey dose ladder, right-aligned 20 frames: code 0 S3K3, 1 S2K2, 2 S6K6, 3 S10K10",
+   "frames": 20,
+   "predicted_s": 0.272,
+   "pll": "04",
+   "write_with": {
+    "PWR": "0F 00 1A 24 30 38",
+    "codes": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "VDCS": "chip default",
+    "LUT_select": "PSR byte 2 bit 7"
+   },
+   "measured_result": "about 3 grey steps, then saturates and reverses; S10K10 saturates at dose 1",
+   "refs": "R-0210",
+   "flags": "[1 ex] [cam]",
+   "lint": "PASS",
+   "origin": "from-scratch (our synthetic segments; no stock rows)",
+   "licence": "CC-BY-SA-4.0",
+   "header_note": "header bytes 1-6 carry the rail/VCOM/rate codes of the stock set our lab used as a template; custom mode ignores the header (rails come from PWR, VCOM from VDCS, frame rate from PLL), so you may overwrite them with your own set's header bytes"
+  },
+  {
+   "name": "bwry29_K10W10",
+   "file": "bwry/bwry29_K10W10.bin",
+   "family": "JD-BWRY-535",
+   "sha1": "acb8bd1f0b4ed120148510f13c0826944df048e4",
+   "tested_panel": "2.9in JD-BWRY example (lab panel and/or one product unit)",
+   "purpose": "windowed BW differential partial (0x83 window): code 0 'K'-bit x10 (to black), code 1 'W'-bit x10 (to white), pair balanced",
+   "frames": 11,
+   "predicted_s": 0.22,
+   "pll": "02",
+   "write_with": {
+    "header": "00 22 2d 2d 22 20 02",
+    "note": "header bytes = the analog values our host writes (rails/VCOM/PLL); window partials use 0x83 window + CDI 97"
+   },
+   "measured_result": "DRF 0.24-0.26 s; fine for counters that rarely re-toggle a pixel, but blocks driven back and forth drift to 12-20 dE00 (lean, 20 updates) and 13.6 (product cycle, 100)",
+   "refs": "R-0045, R-0198, R-0237, R-0238",
+   "flags": "[1 ex] [cam] [prov]",
+   "lint": "PASS",
+   "origin": "from-scratch (our synthetic segments; no stock rows)",
+   "licence": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "bwry29_ky_p1",
+   "file": "bwry/bwry29_ky_p1.bin",
+   "family": "JD-BWRY-535",
+   "sha1": "cc54a268ac2ff15cdb43a11aad8176b8b8de3a2f",
+   "tested_panel": "2.9in JD-BWRY example (lab panel and/or one product unit)",
+   "purpose": "windowed K<->Y counter: code 0 black x23, code 1 yellow kick train",
+   "frames": 55,
+   "predicted_s": 1.098,
+   "pll": "02",
+   "write_with": {
+    "header": "00 22 2d 2d 22 20 02",
+    "note": "header bytes = the analog values our host writes (rails/VCOM/PLL); window partials use 0x83 window + CDI 97"
+   },
+   "measured_result": "DRF 1.1 s per number; holds Y within 0.9 dE00 of itself, but Y is 8.5 dE00 from stock yellow",
+   "refs": "R-0045, R-0198, R-0217",
+   "flags": "[1 ex] [cam]",
+   "lint": "PASS",
+   "origin": "from-scratch (our synthetic segments; no stock rows)",
+   "licence": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "bwry29_BW2_kick3_w10",
+   "file": "bwry/bwry29_BW2_kick3_w10.bin",
+   "family": "JD-BWRY-535",
+   "sha1": "1acfdc9db2c1ce33a43a8c5a91a0e07f2eae0a6b",
+   "tested_panel": "2.9in JD-BWRY example (lab panel and/or one product unit)",
+   "purpose": "best windowed BW partial ('B4 N0'): black with kick, white with Mode-1 W x10 and a short end sequence",
+   "frames": 62,
+   "predicted_s": 1.238,
+   "pll": "02",
+   "write_with": {
+    "header": "00 22 2d 2d 22 20 02",
+    "note": "header bytes = the analog values our host writes (rails/VCOM/PLL); window partials use 0x83 window + CDI 97"
+   },
+   "measured_result": "real product unit: lean cycle K 1.6 / W 2.4 dE00 vs stock; product cycle after 100 updates K 3.1 / W 2.9; outside-window black fades +3.8 L* at 20, +8.1 at 100 on the product cycle (one stock refresh restores it), <= +0.9 on the lean cycle",
+   "refs": "R-0237, R-0238",
+   "flags": "[1 ex] [cam] [prov]",
+   "lint": "PASS",
+   "origin": "from-scratch (our synthetic segments; no stock rows)",
+   "licence": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "bwry29_B4_shake_n2",
+   "file": "bwry/bwry29_B4_shake_n2.bin",
+   "family": "JD-BWRY-535",
+   "sha1": "601c456c7ec614e43f8fdc6b84f03fc1b114fae2",
+   "tested_panel": "2.9in JD-BWRY example (lab panel and/or one product unit)",
+   "purpose": "BW2_kick3_w10 with a local S/K shake (N = 2) in front of the changed pixels (negative result)",
+   "frames": 94,
+   "predicted_s": 1.877,
+   "pll": "02",
+   "write_with": {
+    "header": "00 22 2d 2d 22 20 02",
+    "note": "header bytes = the analog values our host writes (rails/VCOM/PLL); window partials use 0x83 window + CDI 97"
+   },
+   "measured_result": "toggled white gets worse (5.6-5.9 dE00 vs 2.4-3.0 without shake); shake does not help on this panel",
+   "refs": "R-0237",
+   "flags": "[1 ex] [cam] [prov]",
+   "lint": "PASS",
+   "origin": "from-scratch (our synthetic segments; no stock rows)",
+   "licence": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "bwry29_WF_t2e1w1",
+   "file": "bwry/bwry29_WF_t2e1w1.bin",
+   "family": "JD-BWRY-535",
+   "sha1": "ca8c074e6a5236b1f999f2da6043057cace05a92",
+   "tested_panel": "2.9in JD-BWRY example (lab panel and/or one product unit)",
+   "purpose": "fast full-frame white with Mode-0 K kicks, ending 1 Mode-0 K frame + 1 Mode-0 W frame (PLL 07)",
+   "frames": 1552,
+   "predicted_s": 13.006,
+   "pll": "07",
+   "write_with": {
+    "header": "00 22 32 32 22 20 07",
+    "note": "header bytes = the analog values our host writes (rails/VCOM/PLL)"
+   },
+   "measured_result": "13.0 s; best fast white (rested worst 5.4-6.2, median 3.0 dE00 on the full chart); on K/W cells white 1.4-1.6 but black 8-11 dE00 short; does not pass",
+   "refs": "R-0200, R-0202, R-0203, R-0219",
+   "flags": "[1 ex] [cam]",
+   "lint": "PASS",
+   "origin": "from-scratch (our synthetic segments; no stock rows)",
+   "licence": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "bwry29_H_t2f20",
+   "file": "bwry/bwry29_H_t2f20.bin",
+   "family": "JD-BWRY-535",
+   "sha1": "0e1ee574f44057f219a9a4d3342d9dd4994dfd1d",
+   "tested_panel": "2.9in JD-BWRY example (lab panel and/or one product unit)",
+   "purpose": "full-frame BW table with the best black of the fast-run family (PLL 07)",
+   "frames": 2139,
+   "predicted_s": 17.925,
+   "pll": "07",
+   "write_with": {
+    "header": "00 22 32 32 22 20 07",
+    "note": "header bytes = the analog values our host writes (rails/VCOM/PLL)"
+   },
+   "measured_result": "17.9 s, K bands 2.3-3.6 dE00, W 0.8; no faster than stock in practice; does not pass",
+   "refs": "R-0219, R-0237",
+   "flags": "[1 ex] [cam]",
+   "lint": "PASS",
+   "origin": "from-scratch (our synthetic segments; no stock rows)",
+   "licence": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "bwry29_x18n_p02",
+   "file": "bwry/bwry29_x18n_p02.bin",
+   "family": "JD-BWRY-535",
+   "sha1": "cac984ed06defc448f3ac62be04e9448e4647bde",
+   "tested_panel": "2.9in JD-BWRY example (lab panel and/or one product unit)",
+   "purpose": "fast full BWRY 'x18' structure inside the stock rail envelope, Mode-1 K kicks removed, re-trimmed",
+   "frames": 450,
+   "predicted_s": 8.986,
+   "pll": "02",
+   "write_with": {
+    "header": "00 22 32 32 22 20 02",
+    "note": "header bytes = the analog values our host writes (rails/VCOM/PLL)"
+   },
+   "measured_result": "9.0 s per pass; cannot clear a Y/R prior (27-30 dE00 on white over Y/R): failed",
+   "refs": "R-0198",
+   "flags": "[1 ex] [cam]",
+   "lint": "PASS",
+   "origin": "from-scratch (our synthetic segments; no stock rows)",
+   "licence": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "bwry29_ANIM2_n10",
+   "file": "bwry/bwry29_ANIM2_n10.bin",
+   "family": "JD-BWRY-535",
+   "sha1": "fd008c7f6ad79b62589629ddaebbc27ca0043a5b",
+   "tested_panel": "2.9in JD-BWRY example (lab panel and/or one product unit)",
+   "purpose": "in-refresh animation: 6 Hz toggling wedges during one long refresh, BW2 white end",
+   "frames": 1382,
+   "predicted_s": 11.581,
+   "pll": "07",
+   "write_with": {
+    "header": "00 22 2d 2d 22 20 07",
+    "note": "header bytes = the analog values our host writes (rails/VCOM/PLL)"
+   },
+   "measured_result": "11.58 s; toggle amplitude 28-33 L*, held background within 0.2 L*, but the end image is 8.7-11 dE00 off stock (wedges 5-8 L* too dark): not clean",
+   "refs": "followups/bwry29 B2 (no R-id)",
+   "flags": "[1 ex] [cam] [prov]",
+   "lint": "PASS",
+   "origin": "from-scratch (our synthetic segments; no stock rows)",
+   "licence": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "s6_test_SK20",
+   "file": "s6/s6_test_SK20.bin",
+   "family": "S6-800",
+   "sha1": "845e7e8ffc8e4e31227f67d2d0b1f1f38878025e",
+   "tested_panel": "none in this exact byte form (generated by tools/epdlut)",
+   "purpose": "upload-path / timing smoke test: code 0 = S20 K20 + 1 level-0 frame, code 1 (border with CDI 3F) = 41 frames level 0, all other codes hold, LUTC level 0",
+   "frames": 41,
+   "predicted_s": 1.001,
+   "pll": "02",
+   "write_with": {
+    "PWR": "3F 00 1E 18 23 3E",
+    "codes": [
+     0
+    ],
+    "VDCS": "0x0F",
+    "LUT_select": "PSR byte 2 bit 7"
+   },
+   "measured_result": "generated; equivalent balanced S/K probes timed within 2 % on the 7.3in (R-0033)",
+   "refs": "R-0033",
+   "flags": "[generated]",
+   "lint": "PASS",
+   "origin": "from-scratch (generated)",
+   "licence": "CC-BY-SA-4.0"
+  },
+  {
+   "name": "bwry_test_null",
+   "file": "bwry/bwry_test_null.bin",
+   "family": "JD-BWRY-535",
+   "sha1": "3c122a1b71a9d306faee6eefccdbbe4e5d9ac57c",
+   "tested_panel": "none in this exact byte form (generated); the lab 'LNULL' all-0 V arm used the same content",
+   "purpose": "all-0 V table (21 frames, every block terminated): upload/terminator smoke test, lean-cycle baseline",
+   "frames": 21,
+   "predicted_s": 0.419,
+   "pll": "02",
+   "write_with": {
+    "header": "00 22 2d 2d 22 20 02"
+   },
+   "measured_result": "the LNULL arm (all 0 V, windowed, lean cycle) held outside black within +0.03 L* per cycle after a +2.8 L* session-open step",
+   "refs": "R-0217, followups/bwry29 B1",
+   "flags": "[generated] [1 ex]",
+   "lint": "PASS",
+   "origin": "from-scratch (generated)",
+   "licence": "CC-BY-SA-4.0"
+  }
+ ]
+}

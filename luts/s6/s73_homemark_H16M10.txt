@@ -1,0 +1,16 @@
+# s73_homemark_H16M10  S6 800 B  sha1 1f603d7a4d8e28926e6901d6da7a5f78bc4b1084
+header ff 3c fc 67 34 2d 6f ff
+block frames {'LUTC': 0, 0: 0, 1: 38, 2: 0, 3: 0, 4: 0, 5: 20, 6: 0, 7: 0}  refresh = 38 frames
+LUTC (vcom, rate, frames): empty
+slot 1: Kx16 0x6 Sx16   (38 fr)
+    row 0: M=1 [RA=1 x (K16)] [RB=0 x ()]
+    row 1: M=1 [RA=1 x (06)] [RB=0 x ()]
+    row 2: M=1 [RA=1 x (S16)] [RB=0 x ()]
+slot 5: Sx10 Kx10   (20 fr)
+    row 0: M=1 [RA=1 x (S10)] [RB=0 x ()]
+    row 1: M=1 [RA=1 x (K10)] [RB=0 x ()]
+
+lint: PASS
+  L1 refresh 38 frames = 0.93 s at PLL 02
+  L4 slot 1: ends on a drive level at the refresh end (end hold until POF)
+  L3 q_sf {1: -0.0, 5: -0.0}

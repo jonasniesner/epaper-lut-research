@@ -1,0 +1,23 @@
+{
+ "name": "fast73_F1d",
+ "lab_names": [
+  "F1d",
+  "F1d6"
+ ],
+ "panel": "7.3in S6",
+ "input": "live stock set",
+ "command": "python -m epdlut.recipe fast73 SET.bin OUT.bin --row0-drop 5",
+ "steps": [
+  "remove the row-1 S/K shake from every used slot",
+  "remove 5 of the balanced S/K pairs in row 0 group B",
+  "keep forming rows, lead pulse and frame time (PLL 02)"
+ ],
+ "expected": {
+  "frames": 689,
+  "refresh": "16.2 s",
+  "quality": "set-matched median 0.33 dE00, all six colours; ghost chart pass"
+ },
+ "refs": "R-0199, R-0205, R-0231",
+ "flags": "[1 ex] [cam]",
+ "licence": "CC-BY-4.0 (text); you build the table from your own read-back, which we do not distribute"
+}

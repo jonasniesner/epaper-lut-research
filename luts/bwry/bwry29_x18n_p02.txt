@@ -1,0 +1,14 @@
+# bwry29_x18n_p02  JD-BWRY 535 B  sha1 cac984ed06defc448f3ac62be04e9448e4647bde
+header VGHL=00 VSPL_0=22 RAIL_2=32 RAIL_3=32 RAIL_4=22 VCOM=20 PLL=02
+block frames [450, 450, 450, 450, 450, 450] -> refresh 450 frames
+DC per code (V x frames) model A [0.0, 6.0, -1.9, -1.4]  model B [0.0, 6.0, -1.9, -1.4]
+block 0 (LUTC): 0x450   terminator yes
+block 1 (code 0): Kx6 Wx12 Kx6 0x426   terminator yes
+block 2 (code 1): Kx81 0x162 Wx3 0x2 Wx3 0x2 Wx3 0x2 Wx3 0x2 Wx3 0x2 Wx3 0x2 Wx3 0x2 Wx3 0x2 Wx3 0x2 Wx3 0x2 Wx3 0x2 Wx3 0x2 Wx3 0x2 Wx3 0x2 Wx3 0x2 Wx3 0x2 Wx3 0x2 Wx3 0x2 Wx3 0x2 Wx3 0x2 Wx8 0x2 Wx8 0x2 Wx8 0x2 Wx8 0x2 Wx10 0x1 Wx10 0x1 Wx10 0x1 Wx10 0x1 Wx1 0x6 Wx15 0x1   terminator yes
+block 3 (code 2): Wx1 Kx1 Lx3 0x1 Kx1 Lx3 0x1 Kx1 Lx3 0x1 Wx2 0x1 Lx18 Wx2 0x1 Lx18 Wx2 0x1 Lx18 Wx1 0x1 Lx2 Wx1 0x1 Lx2 Wx1 0x1 Lx2 Wx1 0x1 Lx2 Wx2 0x2 Wx2 0x2 Wx2 0x2 Wx2 0x2 Wx2 0x2 Lx2 0x1 Wx5 0x1 Wx8 0x318   terminator yes
+block 4 (code 3): Kx1 Wx56 Kx1 Lx3 0x1 Kx1 Lx3 0x1 Kx1 Lx3 0x1 Kx1 Lx3 0x1 Kx1 Lx3 0x1 Kx1 Lx3 0x1 Kx1 Lx3 0x1 Kx1 Lx3 0x1 Kx1 Lx3 0x2 Wx4 Lx19 0x1 Wx4 Lx19 0x1 Wx4 Lx19 Wx1 Lx20 0x1 Wx1 Lx20 0x1 Wx1 Lx20 0x211   terminator yes
+block 5 (Mode-1 select): 0x243 Kx201 0x6   terminator yes
+
+lint: PASS
+  B4 DC model A [0.0, 6.0, -1.9, -1.4], model B [0.0, 6.0, -1.9, -1.4] (V x frames per code 0..3)
+  refresh 450 frames

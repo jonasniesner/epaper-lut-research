@@ -1,0 +1,39 @@
+E-paper LUT research
+Copyright (c) 2026 Jonas Niesner
+
+Licences
+  Code (tools/, tests/)             MIT          LICENSE
+  Documentation (README, docs/ ...) CC BY 4.0    LICENSE-docs
+  Waveform tables (luts/)           CC BY-SA 4.0 luts/LICENSE
+Code files carry SPDX headers.
+
+How to credit
+  Cite "E-paper LUT research" by Jonas Niesner with a link to
+  https://github.com/jonasniesner/epaper-lut-research (see CITATION.cff).
+  For tables, keep the CC BY-SA 4.0 licence on derived tables.
+
+Related independent work
+  Nic Limper (https://github.com/nlimper) worked on the JD7601 Spectra 6 controller in a separate, parallel project.
+  Several results here build on his findings and reviews (end hold, the 799/800 B layout, codec and level-map
+  cross-checks, codes 4/7 on the JD7601, and ideas we tested); see "Acknowledgements" in README.md.
+  All measurements are ours. Nothing in this repository is copied from that project.
+
+Not included
+  No stock waveform images, OTP/MTP or register read-backs, datasheets or datasheet excerpts, or vendor or
+  third-party driver code. Stock-derived tables are published only as recipes (recipes/).
+
+
+No warranty
+  Custom waveforms can permanently damage e-paper panels and void warranties. See docs/safety.md.
+  Provided "as is", without warranty of any kind, including fitness for a purpose and non-infringement of
+  third-party rights.
+
+Trademarks
+  Spectra is a trademark of E Ink Holdings. Controller and panel names belong to their owners. This project is
+  not affiliated with or endorsed by E Ink, any controller or panel maker, OpenDisplay or the Open Home
+  Foundation; names are used only to describe compatibility.
+
+Use of AI
+  AI tools (Claude Code by Anthropic) were used to support this work: bench automation, analysis, tools, tests
+  and documentation drafts. The research was directed by Jonas Niesner, results come from measurements on real
+  panels, and the content was reviewed before publication.

@@ -1,0 +1,14 @@
+# bwry29_BW2_kick3_w10  JD-BWRY 535 B  sha1 1acfdc9db2c1ce33a43a8c5a91a0e07f2eae0a6b
+header VGHL=00 VSPL_0=22 RAIL_2=2D RAIL_3=2D RAIL_4=22 VCOM=20 PLL=02
+block frames [62, 62, 62, 62, 62, 62] -> refresh 62 frames
+DC per code (V x frames) model A [210.0, -207.4, 0.0, 0.0]  model B [210.0, -207.4, 0.0, 0.0]
+block 0 (LUTC): 0x62   terminator yes
+block 1 (code 0): Kx14 0x48   terminator yes
+block 2 (code 1): 0x15 Wx10 Kx2 Wx10 Kx2 Wx10 Kx2 Wx10 0x1   terminator yes
+block 3 (code 2): 0x62   terminator yes
+block 4 (code 3): 0x62   terminator yes
+block 5 (Mode-1 select): 0x15 Kx10 0x2 Kx10 0x2 Kx10 0x2 Kx10 0x1   terminator yes
+
+lint: PASS
+  B4 DC model A [210.0, -207.4, 0.0, 0.0], model B [210.0, -207.4, 0.0, 0.0] (V x frames per code 0..3)
+  refresh 62 frames

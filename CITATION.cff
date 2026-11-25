@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "E-paper LUT research"
+authors:
+  - given-names: "Jonas"
+    family-names: "Niesner"
+repository-code: "https://github.com/jonasniesner/epaper-lut-research"
+date-released: 2026-11-25
+version: "0.1.0"
+license:
+  - MIT
+  - CC-BY-4.0
+  - CC-BY-SA-4.0
+keywords:
+  - e-paper
+  - waveform
+  - LUT
+  - Spectra 6
+  - BWRY
+abstract: >-
+  Reverse-engineered register waveform tables for S6-class (800 B) and JD-BWRY-class (535 B) e-paper controllers,
+  tools to decode, lint and build them, and measured results on partial and fast refresh modes.

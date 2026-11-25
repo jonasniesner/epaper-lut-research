@@ -1,0 +1,22 @@
+{
+ "name": "flash73_S3",
+ "lab_names": [
+  "S3_N0_wgap0"
+ ],
+ "panel": "7.3in S6",
+ "input": "live stock set",
+ "command": "python -m epdlut.recipe flash73 SET.bin OUT.bin",
+ "steps": [
+  "forming tracks K/Y/R/B/W from the set (shake removed)",
+  "remove the long level-0 idle gap in the W track",
+  "right-align every track (pad level 0 before it)",
+  "codes K 0, Y 2, R 3, B 5, W 6; slot 1 = HOME (K16 0x6 S16) border; code 4 = empty hold"
+ ],
+ "expected": {
+  "refresh": "15.17 s",
+  "quality": "median 0.40 dE00; shapes, text, 2-8 px detail match stock"
+ },
+ "refs": "R-0234, R-0235",
+ "flags": "[1 ex] [cam]",
+ "licence": "CC-BY-4.0 (text); you build the table from your own read-back, which we do not distribute"
+}

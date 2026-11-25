@@ -1,0 +1,12 @@
+# s6_test_SK20  S6 800 B  sha1 845e7e8ffc8e4e31227f67d2d0b1f1f38878025e
+header ff ff ff ff ff ff ff ef
+block frames {'LUTC': 41, 0: 41, 1: 41, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0}  refresh = 41 frames
+LUTC (vcom, rate, frames): [('0', 0, 41)]
+slot 0: Sx20 Kx20 0x1   (41 fr)
+    row 0: M=1 [RA=1 x (S20 K20 01)] [RB=0 x ()]
+slot 1: 0x41   (41 fr)
+    row 0: M=1 [RA=1 x (041)] [RB=0 x ()]
+
+lint: PASS
+  L1 refresh 41 frames = 1.001 s at PLL 02
+  L3 q_sf {0: -0.0, 1: -0.0}

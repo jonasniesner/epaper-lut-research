@@ -1,0 +1,21 @@
+{
+ "name": "fast73_F1e",
+ "lab_names": [
+  "F1e",
+  "F1f"
+ ],
+ "panel": "7.3in S6",
+ "input": "live stock set",
+ "command": "python -m epdlut.recipe fast73 SET.bin OUT.bin --row0-drop 4",
+ "steps": [
+  "as F1d, but remove 4 row-0 pairs"
+ ],
+ "expected": {
+  "frames": 709,
+  "refresh": "16.7 s",
+  "quality": "margin over F1d (the 689-frame floor)"
+ },
+ "refs": "R-0205",
+ "flags": "[1 ex] [cam]",
+ "licence": "CC-BY-4.0 (text); you build the table from your own read-back, which we do not distribute"
+}

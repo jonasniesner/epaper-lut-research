@@ -1,0 +1,23 @@
+{
+ "name": "track73_N1",
+ "lab_names": [
+  "N1 matrix tracks",
+  "N2 host-aware tables"
+ ],
+ "panel": "7.3in S6",
+ "input": "live stock set",
+ "command": "python -m epdlut.recipe track73 SET.bin OUT.bin --colour B --scale 0.5",
+ "steps": [
+  "take one colour's forming track",
+  "remove idle gaps >= 15 frames (except G's internal dwell)",
+  "scale the track length by f (rebalance when f < 1)",
+  "per update: one track per target colour present, at the shortest length that passed from the priors present (docs/partial-modes.md matrix)"
+ ],
+ "expected": {
+  "refresh": "dashboard 8.8 s, random 10.6 s (vs 14.6 s packed)",
+  "quality": "changed pixels median 1.0-1.4; 100 updates no drift"
+ },
+ "refs": "R-0236, R-0239, R-0241",
+ "flags": "[1 ex] [cam]",
+ "licence": "CC-BY-4.0 (text); you build the table from your own read-back, which we do not distribute"
+}
