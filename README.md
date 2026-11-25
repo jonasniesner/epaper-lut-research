@@ -17,6 +17,18 @@ Real panels, filmed on our test rig (stills from the demo video; Spectra 6 light
 
 **Demo video** (silent, about 3 min, speed-ups labelled): [1080p](https://github.com/jonasniesner/epaper-lut-research/releases/download/v1.0/epaper-lut-research-demo.mp4) · [720p](https://github.com/jonasniesner/epaper-lut-research/releases/download/v1.0/epaper-lut-research-demo-720p.mp4) (attached to the [v1.0 release](https://github.com/jonasniesner/epaper-lut-research/releases/tag/v1.0)).
 
+**Partial updates in real time** (clips from the demo video, not sped up):
+
+| | |
+|---|---|
+| ![2.9in BWRY: new time in 0.13 s, the red and yellow surroundings stay](docs/gif/bwry_clock_013s.gif) | ![2.9in BWRY price tag: time, price and stock flag change in 1.1 s](docs/gif/bwry_pricetag_11s.gif) |
+| BWRY 2.9in: new time in 0.13 s | BWRY 2.9in: price tag update in 1.1 s |
+| ![7.3in Spectra 6: each blue progress tick in 1.0 s](docs/gif/s73_blue_tick_1s.gif) | ![7.3in Spectra 6 habit tracker: one day marked in 0.93 s](docs/gif/s73_habit_093s.gif) |
+| Spectra 6 7.3in: blue tick in 1.0 s | Spectra 6 7.3in: day marked in 0.93 s |
+| ![7.3in Spectra 6 dashboard: only the changed regions redraw, in colour](docs/gif/s73_dashboard_partial.gif) | |
+| Spectra 6 7.3in: colour dashboard, a table chosen per update | |
+
+
 | | |
 |---|---|
 | ![7.3in Spectra 6 dashboard: only changed regions redraw, in colour](docs/img/dashboard_73.jpg) | ![7.3in Spectra 6 habit tracker: one day marked in 0.93 s](docs/img/habit_tracker_73.jpg) |
