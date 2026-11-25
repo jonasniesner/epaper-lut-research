@@ -15,6 +15,8 @@ check, build and time them, and our results on partial and fast updates.
 
 Real panels, filmed on our test rig (stills from the demo video; Spectra 6 lighting is flat-field corrected).
 
+**Demo video** (silent, about 3 min, speed-ups labelled): [1080p](https://github.com/jonasniesner/epaper-lut-research/releases/download/v1.0/epaper-lut-research-demo.mp4) · [720p](https://github.com/jonasniesner/epaper-lut-research/releases/download/v1.0/epaper-lut-research-demo-720p.mp4) (attached to the [v1.0 release](https://github.com/jonasniesner/epaper-lut-research/releases/tag/v1.0)).
+
 | | |
 |---|---|
 | ![7.3in Spectra 6 dashboard: only changed regions redraw, in colour](docs/img/dashboard_73.jpg) | ![7.3in Spectra 6 habit tracker: one day marked in 0.93 s](docs/img/habit_tracker_73.jpg) |
@@ -105,7 +107,7 @@ his work too.
 
 ## Licences and credit
 
-Code: MIT ([LICENSE](LICENSE)). Docs: CC BY 4.0 ([LICENSE-docs](LICENSE-docs)). Tables in `luts/`: CC BY-SA 4.0
+Code: MIT ([LICENSE](LICENSE)). Docs and the demo video: CC BY 4.0 ([LICENSE-docs](LICENSE-docs)). Tables in `luts/`: CC BY-SA 4.0
 ([luts/LICENSE](luts/LICENSE)). How to credit and related work: [NOTICE](NOTICE), [CITATION.cff](CITATION.cff).
 
 **If you use any of this** (code, tables or docs) in a project, firmware or product, please credit
